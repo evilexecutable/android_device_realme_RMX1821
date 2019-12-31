@@ -97,6 +97,9 @@ endif
 # SD
 TARGET_EXFAT_DRIVER := sdfat
 
+# VNDK
+BOARD_VNDK_VERSION := current
+
 # Debug
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
