@@ -109,6 +109,7 @@ ifeq ($(HOST_OS),linux)
 endif
 
 # system.prop
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 # Debug
