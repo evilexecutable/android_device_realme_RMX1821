@@ -103,6 +103,14 @@ BOARD_VNDK_VERSION := current
 # Enable 64-bits binder (THIS MAY BE WRONG!)
 TARGET_USES_64_BIT_BINDER := true
 
+# DEX Pre-optimization
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+    WITH_DEXPREOPT ?= true
+    WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
+  endif
+endif
+
 # Debug
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
