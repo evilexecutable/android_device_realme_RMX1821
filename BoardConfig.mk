@@ -100,6 +100,9 @@ TARGET_EXFAT_DRIVER := sdfat
 # VNDK
 BOARD_VNDK_VERSION := current
 
+# Enable 64-bits binder (THIS MAY BE WRONG!)
+TARGET_USES_64_BIT_BINDER := true
+
 # Debug
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
