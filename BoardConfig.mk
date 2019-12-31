@@ -59,6 +59,7 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 
 # TWRP
+ifeq ($(RECOVERY_VARIANT),twrp)
 BOARD_SUPPRESS_SECURE_ERASE := true
 BOARD_USE_FRAMEBUFFER_ALPHA_CHANNEL := true
 DEVICE_SCREEN_WIDTH := 720
@@ -91,6 +92,7 @@ TW_CRYPTO_FS_TYPE := "ext4"
 TW_CRYPTO_REAL_BLKDEV := "/dev/block/platform/bootdevice/by-name/userdata"
 TW_CRYPTO_MNT_POINT := "/data"
 TW_CRYPTO_FS_OPTIONS := "nosuid,nodev,noatime,discard,noauto_da_alloc,data=ordered"
+endif
 
 # Debug
 TWRP_INCLUDE_LOGCAT := true
