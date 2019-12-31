@@ -34,9 +34,6 @@ TARGET_KERNEL_CONFIG := oppo6771_18601_defconfig
 TARGET_KERNEL_SOURCE := kernel/realme/RMX1821
 BOARD_MKBOOTIMG_ARGS := --base 0x40078000 --ramdisk_offset 0x14f88000 --second_offset 0x00f00000 --tags_offset 0x13f88000
 
-# system.prop
-TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
-
 #Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 33554432
@@ -110,6 +107,9 @@ ifeq ($(HOST_OS),linux)
     WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY ?= true
   endif
 endif
+
+# system.prop
+TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
 # Debug
 TWRP_INCLUDE_LOGCAT := true
