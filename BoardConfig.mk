@@ -9,7 +9,7 @@ TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := cortex-a73
 
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv7-a-neon
+TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
@@ -33,6 +33,8 @@ BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.selinux=permissive
 TARGET_KERNEL_CONFIG := oppo6771_18601_defconfig
 TARGET_KERNEL_SOURCE := kernel/realme/RMX1821
 BOARD_MKBOOTIMG_ARGS := --base 0x40078000 --ramdisk_offset 0x14f88000 --second_offset 0x00f00000 --tags_offset 0x13f88000
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+BOARD_KERNEL_IMAGE_NAME := zImage-dtb
 
 #Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
